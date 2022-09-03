@@ -9,16 +9,24 @@
     @media screen and (max-width: 767px){
       justify-content: center;
     }
+
   }
 
   .footer__social {
     @media screen and (max-width: 767px){
+      margin-left: auto;
+      margin-right: auto;
       text-align:center;
+
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px){
-    margin-left: 70px;
+      text-align:center;
+      margin-left: auto;
+      margin-right: auto;
+      
     }
+
 
     & .social__icon {
       fill: #ffffff;
@@ -46,6 +54,12 @@
     text-align:center;
     max-width: 232px;
   }
+  @media screen and (min-width: 768px) and (max-width: 1199px){
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
   &__link {
     @include font(null, 14, 1.71, 0.03);
     color: #ffffff;
