@@ -81,10 +81,6 @@ body {
 .logo {
   font-family: "Raleway", sans-serif;
   font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
   color: #2196f3;
   text-decoration: none;
 }
@@ -94,19 +90,32 @@ body {
 .logo--footer {
   color: #fff;
 }
+@media screen and (max-width: 1199px) {
+  .logo {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    max-width: 134px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
+}
 
 .container {
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (max-width: 479px) {
-  .container {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .container {
     width: 480px;
   }
@@ -140,13 +149,22 @@ body {
   background-color: var(--header-backgroud);
   border-bottom: 1px solid #ececec;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header__container {
+    justify-content: space-between;
+  }
+}
 .header__container .link--current, .header__container .link:hover, .header__container .link:focus {
   color: var(--header-link-hover);
 }
 
 .navigation__list {
   display: flex;
-  margin-left: 93px;
+}
+@media screen and (min-width: 1200px) {
+  .navigation__list {
+    margin-left: 93px;
+  }
 }
 .navigation__list .navigation__item:not(:last-child) {
   margin-right: 50px;
@@ -180,10 +198,22 @@ body {
 
 .contact {
   display: flex;
-  margin-left: auto;
 }
-.contact .contact__item + .contact__item {
-  margin-left: 30px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact {
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact .contact__item + .contact__item {
+    margin-left: 30px;
+  }
 }
 .contact__icon {
   fill: #757575;
@@ -194,13 +224,21 @@ body {
 }
 .contact__tel, .contact__mail {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
   color: #757575;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .contact__tel, .contact__mail {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
 }
 
 .hero {
@@ -344,7 +382,7 @@ body {
 .about__item {
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .about__item {
     width: calc((100% - 30px) / 2);
   }
@@ -438,7 +476,7 @@ body {
   border-radius: 0 0 4px 4px;
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .team__item {
     width: calc((100% - 30px) / 2);
   }
@@ -463,7 +501,7 @@ body {
   margin-bottom: 30px;
 }
 @media screen and (min-width: 1200px) {
-  .team__title {
+  .team {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;

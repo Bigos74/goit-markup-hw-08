@@ -8,15 +8,14 @@
   }
 
   &__item{
-    @media screen and (max-width: 767px) {
       width: calc((100% - var(--gap)) / 2); 
-    }
+    
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include tablet {
       width: calc((100% - var(--gap) * 2) / 3); 
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       flex: 1; 
     }
   }
@@ -24,17 +23,16 @@
   &__title {
     color: #212121;
     margin-bottom: 30px;
-    @media screen and (max-width: 767px){
       @include font(null, 28, 1.17, 0.03);
       text-align: center; 
+    
+
+    @include tablet {
+        @include font(null, 28, 1.17, 0.03);
+        text-align: center;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      @include font(null, 28, 1.17, 0.03);
-      text-align: center;
-    }
-
-    @media screen and (min-width: 1200px){
+    @include desktop{
      @include font(null, 36, 1.16, 0.03);
       text-align: center;
       margin-bottom: 50px;
