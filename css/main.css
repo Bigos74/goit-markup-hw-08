@@ -310,24 +310,16 @@ body {
   }
 }
 .hero__title {
+  max-width: 360px;
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
-  max-width: 360px;
-  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  font-weight: 900;
-  font-size: 26px;
-  line-height: 1.62;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #ffffff;
-  min-width: 360px;
-  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero__title {
@@ -338,7 +330,6 @@ body {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #ffffff;
-    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -350,7 +341,6 @@ body {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #ffffff;
-    margin-bottom: 30px;
   }
 }
 
@@ -821,16 +811,37 @@ body {
 
 .modal {
   position: absolute;
-  width: 528px;
-  min-height: 581px;
+  min-width: 320px;
+  min-height: 500px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   top: 50%;
   left: 50%;
+  padding: 40px 20px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 40px;
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .modal {
+    width: 450px;
+    min-height: 609px;
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    min-height: 609px;
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+    padding: 40px;
+  }
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
@@ -933,11 +944,18 @@ body {
 }
 
 .check__text {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: #757575;
   justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .check__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 .check__icon {
   width: 16px;
@@ -955,21 +973,28 @@ body {
 .check__input:focus + .check__text .check__icon {
   border-color: #2196f3;
 }
-.check__icon {
+.check__span {
   fill: transparent;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.check__input:checked + .check__text .check__icon {
+.check__input:checked + .check__text .check__span {
   fill: #ffffff;
 }
 .check__terms {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #2196f3;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .check__terms {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 .check__btn {
   display: block;

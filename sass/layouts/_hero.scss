@@ -71,19 +71,14 @@
   } 
 
   &__title { 
+    max-width: 360px;
+    margin-bottom: 30px;
+
     @include font(700, 20, 1.62, 0.06);
         text-transform: uppercase;
         color: #ffffff;
-        max-width: 360px;
-        margin-bottom: 30px;
         margin-left: auto;
         margin-right: auto;
-
-      @include font(900, 26, 1.62, 0.06);
-        text-transform: uppercase;
-        color: #ffffff;
-        min-width: 360px;
-        margin-bottom: 30px;
 
     @include tablet {
       min-width: 360px;
@@ -91,7 +86,6 @@
       @include font(900, 26, 1.62, 0.06);
         text-transform: uppercase;
         color: #ffffff;
-        margin-bottom: 30px;
     }
 
     @include desktop {
@@ -99,8 +93,7 @@
 
       @include font(900, 44, 1.36, 0.06);
         text-transform: uppercase;
-        color: #ffffff;
-        margin-bottom: 30px;   
+        color: #ffffff;   
     }
    }
   }
