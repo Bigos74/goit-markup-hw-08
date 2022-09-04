@@ -1,7 +1,5 @@
 .work {
-  @include tablet {
-    display: none;
-  }
+  display: none;
 
   @include desktop {
     &__list {

@@ -3,21 +3,46 @@
   height: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 118px;
+  padding-top: 118px;
 
   background-color: var(--hero-background);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/Background-hero-480.jpg);
+    
+  @include tablet {
+    width: 100%;
+    height: 400px;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/Background-hero-768.jpg);
+    background-color: var(--hero-background);
+  }
+
+  @include desktop {
+    max-width: 1600px;
+    width: 100%;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  
+    
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/Background-hero.jpg);
+    background-color: var(--hero-background);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+  }
     
   &__btn {
     font-family: 'Roboto';
     font-style: normal;
-    padding-bottom: 118px;
-    padding-top: 118px;
-
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/Background-hero-480.jpg);
-
+    
     @include font(700, 16, 1.88, 0.06);
       color: #ffffff;
       background: #2196f3;
@@ -40,28 +65,9 @@
     }
   }
     
-  @include tablet {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/Background-hero-768.jpg);
-    background-color: var(--hero-background);
-  }
-
   @include desktop {
-    max-width: 1600px;
-    width: 100%;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  
     padding-bottom: 200px;
     padding-top: 200px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/Background-hero.jpg);
-    background-color: var(--hero-background);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
   } 
 
   &__title { 
@@ -70,38 +76,31 @@
         color: #ffffff;
         max-width: 360px;
         margin-bottom: 30px;
-    }
-
-    @include mobile {
-      padding-left: 60px;
-      padding-right: 60px;
+        margin-left: auto;
+        margin-right: auto;
 
       @include font(900, 26, 1.62, 0.06);
         text-transform: uppercase;
         color: #ffffff;
         min-width: 360px;
         margin-bottom: 30px;
-    }
 
     @include tablet {
-      padding-left: 204px;
-      padding-right: 204px;
+      min-width: 360px;
     
       @include font(900, 26, 1.62, 0.06);
         text-transform: uppercase;
         color: #ffffff;
-        min-width: 360px;
         margin-bottom: 30px;
     }
+
     @include desktop {
-      padding-left: 252px;
-      padding-right: 252px;
-    
+      min-width: 696px;
+
       @include font(900, 44, 1.36, 0.06);
         text-transform: uppercase;
         color: #ffffff;
-        min-width: 696px;
-        margin-bottom: 30px;
+        margin-bottom: 30px;   
     }
    }
-
+  }

@@ -17,8 +17,9 @@
     gap: 20px;
     width: 100%;
 
-    // @include desktop{ 
-    // }
+    @include desktop{ 
+      flex-direction: inherit;
+     }
   }
 
   &__input {
