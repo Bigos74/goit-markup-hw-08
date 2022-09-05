@@ -6,11 +6,11 @@
   margin-right: auto;
   
   @include mobile {
-    width: 480px;
+    max-width: 480px;
   }  
 
   @include tablet {
-    width: 768px;
+    max-width: 768px;
   }  
 
   @include desktop {

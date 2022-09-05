@@ -60,7 +60,73 @@
             </a>
           </li>
         </ul>
+        <button type="button" class="menu__open btn" data-menu-open>
+          <svg class="menu" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
+      <div class="case is-hidden" data-menu>
+        <div class="container">
+          <div class="case__top">
+            <button type="button" class="case__close btn" data-menu-close>
+              <svg class="case__close__icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav class="case__navigation">
+              <ul class="case__list list">
+                <li class="case__item">
+                  <a href="./index.html" class="case__link link--current link">Студія</a>
+                </li>
+                <li class="case__item">
+                  <a href="./potfolio.html" class="case__link link">Портфоліо</a>
+                </li>
+                <li class="case__item">
+                  <a href="#" class="case__link link">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        <ul class="communication list">
+          <li class="communication__item">
+            <a class="communication__tel link" href="tel:+380961111111">
+              +38 096 111 11 11
+            </a>
+          </li>
+          <li class="communication__item">
+            <a class="communication__mail link" href="mailto:info@devstudio.com">
+              info@devstudio.com
+            </a>
+          </li>
+        </ul>
+        <ul class="public list">
+          <li class="public__item">
+            <a href="" class="public__link link"
+            target="_blank"
+            rel="noopener noreferrer nofollow">Instagram</a>
+          </li>
+          <span class="public__divider"></span>
+          <li class="public__item">
+            <a href="" class="public__link link"
+            target="_blank"
+            rel="noopener noreferrer nofollow">Twitter</a>
+          </li>
+          <span class="public__divider"></span>
+          <li class="public__item">
+            <a href="" class="public__link link"
+            target="_blank"
+            rel="noopener noreferrer nofollow">Facebook</a>
+          </li>
+          <span class="public__divider"></span>
+          <li class="public__item">
+            <a href="" class="public__link link"
+            target="_blank"
+            rel="noopener noreferrer nofollow">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     </header>
     <main>
       <section class="hero centered">
@@ -125,20 +191,24 @@
           <h2 class="work__title centered">Чим ми займаємося</h2>
           <ul class="work__list list">
             <li class="work__item">
-              <img src="./images/comp1.jpg" alt="Зображення комьютера" width="370" height="294" />
+              <img
+              srcset="./images/comp1.jpg 1x, 
+              ./images/comp1-x2.jpg 2x" 
+              src="./images/comp1.jpg" alt="Зображення комьютера" width="370" height="294" />
               <p class="work__text">Десктопні додатки</p>
             </li>
             <li class="work__item">
-              <img
-                src="./images/comp2.jpg"
-                alt="Зображення мобільного телефона"
-                width="370"
-                height="294"
-              />
+              <img 
+              srcset="./images/comp2.jpg 1x, 
+              ./images/comp2-x2.jpg 2x" 
+              src="./images/comp2.jpg" alt="Зображення мобільного телефона" width="370" height="294" />
               <p class="work__text">Мобільні додатки</p>
             </li>
             <li class="work__item">
-              <img src="./images/comp3.jpg" alt="Зображення планшета" width="370" height="294" />
+              <img 
+              srcset="./images/comp3.jpg 1x, 
+              ./images/comp3-x2.jpg 2x" 
+              src="./images/comp3.jpg" alt="Зображення планшета" width="370" height="294" />
               <p class="work__text">Дизайнерські рішення</p>
             </li>
           </ul>
@@ -149,7 +219,29 @@
           <h2 class="team__title centered">Наша команда</h2>
           <ul class="team__list list">
             <li class="team__item">
-              <img src="./images/person1.jpg" alt="Ігор Дем'яненко" width="270" height="260" />
+              <picture>
+                <source 
+                  srcset="
+                  ./images/person1.jpg 1x, 
+                  ./images/person1-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source 
+                  srcset="
+                  ./images/person1-tab.jpg 1x, 
+                  ./images/person1-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source 
+                  srcset="
+                  ./images/person1-mob.jpg 1x, 
+                  ./images/person1-mob-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img  
+                  src="./images/person1-mob.jpg" alt="Ігор Дем'яненко" width="450" height="460" />
+              </picture>
+              
               <div class="team__info">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
                 <p class="team__proff">Product Designer</p>
@@ -186,7 +278,29 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/person2.jpg" alt="Ольга Рєпіна" width="270" height="260" />
+              <picture>
+                <source 
+                  srcset="
+                  ./images/person2.jpg 1x, 
+                  ./images/person2-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source 
+                  srcset="
+                  ./images/person2-tab.jpg 1x, 
+                  ./images/person2-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source 
+                  srcset="
+                  ./images/person2-mob.jpg 1x, 
+                  ./images/person2-mob-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img  
+                  src="./images/person2-mob.jpg" alt="Ольга Рєпіна" width="450" height="460" />
+              </picture>
+
               <div class="team__info">
                 <h3 class="team__name">Ольга Рєпіна</h3>
                 <p class="team__proff">Frontend Developer</p>
@@ -223,7 +337,28 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/person3.jpg" alt="Микола Тарасов" width="270" height="260" />
+              <picture>
+                <source 
+                  srcset="
+                  ./images/person3.jpg 1x, 
+                  ./images/person3-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source 
+                  srcset="
+                  ./images/person3-tab.jpg 1x, 
+                  ./images/person3-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source 
+                  srcset="
+                  ./images/person3-mob.jpg 1x, 
+                  ./images/person3-mob-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img  
+                  src="./images/person3-mob.jpg" alt="Микола Тарасов" width="450" height="460" />
+              </picture>
               <div class="team__info">
                 <h3 class="team__name">Микола Тарасов</h3>
                 <p class="team__proff">Marketing</p>
@@ -260,7 +395,29 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/person4.jpg" alt="Михайло Єрмаков" width="270" height="260" />
+              <picture>
+                <source 
+                  srcset="
+                  ./images/person4.jpg 1x, 
+                  ./images/person4-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source 
+                  srcset="
+                  ./images/person4-tab.jpg 1x, 
+                  ./images/person4-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source 
+                  srcset="
+                  ./images/person4-mob.jpg 1x, 
+                  ./images/person4-mob-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img  
+                  src="./images/person4-mob.jpg" alt="Михайло Єрмаков" width="450" height="460" />
+              </picture>
+
               <div class="team__info">
                 <h3 class="team__name">Михайло Єрмаков</h3>
                 <p class="team__proff">UI Designer</p>
@@ -513,5 +670,6 @@
       AOS.init();
     </script>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

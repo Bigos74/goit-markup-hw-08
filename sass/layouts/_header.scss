@@ -1,12 +1,14 @@
 .header {
   background-color: var(--header-backgroud);
   border-bottom: 1px solid #ececec;
+  
   &__container {
     @include tablet{
       justify-content: space-between;
     }
     @extend %align-list;
   }
+  
   &__container .link {
     &--current,
     &:hover,
@@ -17,21 +19,26 @@
 }
 
 .navigation {
+  @include mobile {
+    display: none;
+  }   
+  
   @extend %align-list;
+  
+  @include desktop {
+    margin-left: auto;
+  }
 
   &__list {
     display: flex;
-    @include desktop {
-      margin-left: 93px;
-    }
-    
-    & .navigation__item:not(:last-child) {
-      margin-right: 50px;
-    }
+    margin-left: auto;
+    gap: 50px;
   }
+ 
   &__item {
     position: relative;
   }
+    
   &__link {
     display: block;
     padding-top: 32px;
@@ -39,7 +46,7 @@
     @include font(500, 14, 1.14, 0.02);
     color: #212121;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  
     &.link--current::after {
       content: '';
       display: block;
@@ -53,26 +60,25 @@
       border-radius: 2px;
     }
   }
-}
+} 
 
 .contact {
-  display: flex;
+  @include mobile {
+    display: none;
+  }
 
   @include tablet {
+    display: flex;
     flex-direction: column;
     gap: 10px; 
   }
-
-  @include desktop {
-    margin-left: auto;  
-  }
   
-  & .contact__item + .contact__item {
-    @media screen and (min-width: 1200px) {
-      margin-left: 30px;
-    }
-
+  @include desktop {
+    margin-left: auto;
+    display: flex;
+    gap: 30px; 
   }
+    
   &__icon {
     fill: #757575;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -81,16 +87,125 @@
       fill: currentColor;
     }
   }
+
   &__tel,
   &__mail {
-    @extend %align-list;
+    display: flex;
+    align-items: center;
     @include font(500, 12, 1.16, 0.02);
     color: #757575;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     column-gap: 10px;
-
-    @include desktop{
-      @include font(500, 14, 1.14, 0.02);
-    } 
   }
 }
+
+.menu__open {
+  margin-left: auto;
+  
+  @include largerThanMobile {
+    display: none;
+  }
+}
+
+.case { 
+  @include largerThanMobile {
+    display: none;
+  }
+
+  position: fixed;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  > .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 40px;
+  }
+
+
+  &__close {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    top: 20px;
+    right: 15px;
+    position: absolute;
+    margin-left: auto;
+  
+  &__icon {
+    fill: #000000;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      .modal__btn:focus &,
+      .modal__btn:hover & {
+        fill: #2196f3;
+      }
+    }
+  }
+
+  &__item:not(:last-child ) {
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    @include font(500, 40, 1.17, 0.02 );
+    color: #212121;
+    margin-bottom: 32px;
+    &:hover,
+    &:focus {
+      color: var(--header-link-hover);
+    }
+  }
+}
+
+.communication {
+  margin-top: 302px;
+  margin-bottom: auto;
+
+  &__item {
+    margin-bottom: 32px;
+  }
+
+  &__mail {
+    @include font(500, 24, 1.16, 0.02 );
+    color: #757575;
+  }
+ 
+  &__tel {
+    @include font(500, 34, 1.17, 0.02 );
+    letter-spacing: 0.02em;
+    color: #2196F3;
+  }
+}   
+
+.public {
+  display: flex;
+  justify-content: space-between;
+
+  &__link {
+    @include font(500, 18, 1.22, 0.02 );
+    color: #2196F3;
+  }
+
+  &__divider {
+      height: 22px;
+      width: 1px;
+      background-color: rgba(33, 33, 33, 0.2); 
+  }
+}
+

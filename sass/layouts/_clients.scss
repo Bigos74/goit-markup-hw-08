@@ -10,7 +10,6 @@
   &__item{
       width: calc((100% - var(--gap)) / 2); 
     
-
     @include tablet {
       width: calc((100% - var(--gap) * 2) / 3); 
     }

@@ -6,7 +6,7 @@
 }
 
 @mixin mobile {
- @media screen and (min-width: 480px) and (max-width: 767px) {
+ @media screen and (max-width: 767px) {
   @content;
  }
 }
@@ -17,8 +17,20 @@
   }
 }
 
+@mixin largerThanMobile{
+  @media screen and (min-width: 768px) {
+    @content; 
+  }
+}
+
 @mixin desktop {
   @media screen and (min-width: 1200px) {
     @content;
   }  
+}
+
+@mixin retina {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    @content;
+  }
 }

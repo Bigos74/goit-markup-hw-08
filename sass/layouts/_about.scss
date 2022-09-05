@@ -33,14 +33,21 @@
     background: #f5f4fa;
     border-radius: 4px;
   }
-  &__title {
-    @include font(700, 14, 1.14, 0.03);
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    color: var(--title);
-  }
+  
   &__text {
     @include font(null, 14, 1.71, 0.03);
     color: var(--after-title);
   }
-}
+
+  &__title {
+    @include font(700, 14, 1.14, 0.03);
+    margin-bottom: 10px;
+    text-align: center;;
+    color: var(--title);
+    
+    @include largerThanMobile {
+      text-transform: uppercase;
+      text-align: left;
+    }
+  } 
+ }

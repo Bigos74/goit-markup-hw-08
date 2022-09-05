@@ -17,6 +17,11 @@ body {
   
   color: #2196f3;
   text-decoration: none;
+  
+  @include mobile {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
 
   &--header {
     color: #000000;
