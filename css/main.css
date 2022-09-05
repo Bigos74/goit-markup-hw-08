@@ -391,7 +391,7 @@ body {
     height: 600px;
     padding-bottom: 200px;
     padding-top: 200px;
-    background-image: var(--bg-gradient), url(../images/background-hero.jpg);
+    background-image: var(--bg-gradient), url(../images/background-hero-1x.jpg);
     background-color: var(--hero-background);
   }
 }
