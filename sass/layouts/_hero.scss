@@ -26,8 +26,8 @@
     @include retina {
       background-image: var(--bg-gradient),
       url(../images/background-hero-tablet-2x.jpg);
-      }
     }
+  }
 
   @include desktop {
     max-width: 1600px;
@@ -41,8 +41,8 @@
     @include retina {
       background-image: var(--bg-gradient),
       url(../images/background-hero-2x.jpg);
-      }
-   }
+    }
+  }
     
   &__btn {
     font-family: 'Roboto';
