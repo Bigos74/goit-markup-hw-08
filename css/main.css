@@ -81,6 +81,10 @@ body {
 .logo {
   font-family: "Raleway", sans-serif;
   font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
   color: #2196f3;
   text-decoration: none;
 }
@@ -98,10 +102,6 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .logo {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.16;
-    letter-spacing: 0.03em;
     max-width: 134px;
   }
 }
@@ -172,12 +172,11 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .navigation {
-    margin-left: auto;
+    margin-left: 93px;
   }
 }
 .navigation__list {
   display: flex;
-  margin-left: auto;
   gap: 50px;
 }
 .navigation__item {
@@ -245,6 +244,14 @@ body {
   -moz-column-gap: 10px;
        column-gap: 10px;
 }
+@media screen and (min-width: 1200px) {
+  .contact__tel, .contact__mail {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+}
 
 .menu__open {
   margin-left: auto;
@@ -269,6 +276,9 @@ body {
     display: none;
   }
 }
+.case__top {
+  margin-bottom: 100px;
+}
 .case.is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -279,7 +289,6 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 48px 40px;
 }
 @media screen and (max-width: 420px) {
@@ -423,6 +432,7 @@ body {
 .hero__btn {
   font-family: "Roboto";
   font-style: normal;
+  padding: 10px 24px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -431,11 +441,6 @@ body {
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .hero__btn {
-    padding: 10px 24px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .hero__btn {
@@ -624,11 +629,12 @@ body {
   margin-bottom: 30px;
 }
 @media screen and (min-width: 1200px) {
-  .team {
+  .team__title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
     letter-spacing: 0.03em;
+    margin-bottom: 50px;
   }
 }
 .team__name {
@@ -641,6 +647,7 @@ body {
   text-align: center;
 }
 .team__proff {
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
@@ -756,6 +763,12 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer .footer__social {
+    -moz-text-align-last: left;
+         text-align-last: left;
+  }
 }
 .footer .footer__social .social__icon {
   fill: #ffffff;

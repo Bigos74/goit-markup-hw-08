@@ -48,6 +48,7 @@
   &__btn {
     font-family: 'Roboto';
     font-style: normal;
+    padding: 10px 24px;
     
     @include font(700, 16, 1.88, 0.06);
       color: #ffffff;
@@ -55,10 +56,6 @@
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
       border-radius: 4px;
 
-    @include tablet {
-      padding: 10px 24px;
-      }
-      
     @include desktop {
       padding: 10px 32px;
       }
