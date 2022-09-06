@@ -123,9 +123,9 @@
   height: 100vh;
   z-index: 1;
   
-  &__top{
-    margin-bottom: 100px;
-  }
+  // &__top{
+  //   margin-bottom: 100px;
+  // }
 
   &.is-hidden {
     visibility: hidden;
@@ -138,6 +138,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 48px 40px;
      
     @media screen and (max-width: 420px) {
